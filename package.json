@@ -1,0 +1,64 @@
+{
+  "name": "my-project",
+  "version": "4.0.0",
+  "description": "auto convert pug, sass, es6+ to html,css,es5",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangdev1808/americandoor.git"
+  },
+  "author": "hoangdev1808",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoangdev1808/americandoor.git"
+  },
+  "homepage": "https://github.com/hoangdev1808/americandoor#readme",
+  "keywords": [],
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-transform-async-to-generator": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
+    "@babel/runtime": "^7.10.2",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@mdi/font": "^5.3.45",
+    "autoprefixer": "^9.8.0",
+    "browserify": "^16.5.1",
+    "core-js": "^3.6.5",
+    "cowsay": "^1.4.0",
+    "css-declaration-sorter": "^5.1.2",
+    "del": "^5.1.0",
+    "fibers": "^5.0.0",
+    "graceful-fs": "^4.2.4",
+    "gulp-rename": "^2.0.0",
+    "material-icons": "^0.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/polyfill": "^7.10.1",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-wait": "0.0.2",
+    "node-sass": "^4.14.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "yarn": "^1.22.4"
+  }
+}

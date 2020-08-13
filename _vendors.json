@@ -1,0 +1,26 @@
+{
+	"fonts": [
+		"node_modules/@mdi/font/fonts/**"
+	],
+	"js": [
+		"bower_components/jquery/dist/jquery.js",
+		"vendors/mapping.js",
+		"bower_components/pagePiling.js/dist/jquery.pagepiling.js",
+        "vendors/mapping-listener.js",
+		"bower_components/jquery-ui/jquery-ui.min.js",
+		"bower_components/bootstrap/dist/js/bootstrap.min.js",
+		"bower_components/jquery-nice-select/js/jquery.nice-select.min.js",
+		"bower_components/swiper/dist/js/swiper.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.min.js",
+		"bower_components/wow/dist/wow.min.js"
+	],
+	"css": [
+		"node_modules/@mdi/font/css/materialdesignicons.mim.css",
+		"bower_components/pagePiling.js/dist/jquery.pagepiling.css",
+		"bower_components/jquery-ui/themes/base/jquery-ui.min.css",
+		"bower_components/bootstrap/dist/css/bootstrap.min.css",
+		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/wow/css/libs/animate.css"
+	]
+}

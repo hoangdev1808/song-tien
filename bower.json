@@ -1,0 +1,29 @@
+{
+  "name": "HTML TOOL",
+  "description": "auto convert pug, sass, es6+ to html,css,es5",
+  "main": "gulpfile.babel.js",
+  "authors": [
+    "hoangdev1808"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hoangdev1808/americandoor",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fancybox": "^3.5.7",
+    "jquery": "^3.5.1",
+    "bootstrap": "^4.5.0",
+    "jquery-nice-select": "^1.1.0",
+    "swiper": "^4.5.0",
+    "wow": "wow-mit#^1.3.0",
+    "aos": "^2.3.4",
+    "jquery-ui": "^1.12.1",
+    "pagePiling.js": "pagepiling.js#^1.5.6"
+  }
+}
