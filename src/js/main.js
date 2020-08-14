@@ -7,14 +7,11 @@ function FullPage() {
 		menu: null,
 		direction: 'vertical',
 		verticalCentered: true,
-		sectionsColor: [],
-		anchors: [],
 		scrollingSpeed: 1000,
 		delay: 300,
 		easing: 'swing',
 		loopBottom: false,
 		loopTop: false,
-		css3: true,
 		navigation: {
 			'textColor': '#fff',
 			'position': 'right',
@@ -44,18 +41,14 @@ const toggleMenuMobile = () => {
 
 // Home banner
 function homeBanner() {
-	var swiper = new Swiper('.banner-main', {
+	var swiperhomebanner = new Swiper('.home-banner', {
 		loop: true,
-		speed: 1000,
+		speed: 1500,
 		autoplay: {
-			delay: 2000,
-			disableOnInteraction: false,
+			delay: 3500,
+			disableOnInteraction: false
 		},
-		navigation: {
-			nextEl: '.banner-main .swiper-button-next',
-			prevEl: '.banner-main .swiper-button-prev',
-		},
-	})
+	});
 }
 
 function tabsDescription() {

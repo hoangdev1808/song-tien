@@ -1,2 +1,78 @@
 .h-3
-	background-color: blue
+	background-color: #eeeae7
+	&__item
+		width: 100%
+		figure
+			width: 100%
+			height: 100%
+			.img
+				width: 100%
+				height: 285px
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+			figcaption
+				.title
+					padding-top: 25px
+					margin-bottom: 40px
+					h3
+						font-size: 20px
+						font-weight: 400
+						font-family: "Segoe UI"
+						color: rgb(67, 92, 54)
+						text-transform: uppercase
+						overflow: hidden
+						max-height: 44px
+				.desc
+					padding: 20px 0
+					position: relative
+					&::after
+						position: absolute
+						top: 0
+						left: 0
+						content: ''
+						background-color: rgb(164, 55, 50)
+						width: 57px
+						height: 1px
+					p
+					font-size: 18px
+					font-family: "Segoe UI"
+					color: rgb(109, 110, 113)
+					font-weight: 300
+			&:hover
+				figcaption
+					.title
+						h3
+							color: #a43732
+	.block-item
+		width: 100%
+		padding-top: 50px
+		text-align: center
+	@media screen and ( max-width: 1199px)
+		.block-item
+			padding-top: 20px
+		&__item
+			margin-bottom: 10px
+			figure
+				.img
+					width: 100%
+					height: 180px
+				figcaption
+					.title
+						padding-top: 10px
+						margin-bottom: 10px
+						h3
+							font-size: 16px
+							max-height: 35px
+					.desc
+						padding: 10px 0
+						p
+							font-size: 14px
+							max-height: 60px
+							overflow: hidden
+	@media screen and ( max-width: 375px)
+		figure
+			.img
+				width: 100%
+				height: 150px

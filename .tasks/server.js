@@ -23,6 +23,9 @@ import {
 import {
 	copyAssets
 } from "./copy";
+import{
+	coppyWebfonts
+}from "./copy";
 import {
 	cleanAssets
 } from "./clean";
@@ -58,8 +61,8 @@ const server = () => {
 
 	watch([
 		"src/assets/**/**.{svg,png,jpg,jpeg,gif,mp4}",
-	], series(cleanAssets, copyAssets));
-
+		"src/webfonts/**",
+	], series(cleanAssets, copyAssets, coppyWebfonts));
 
 	watch([
 		"vendors/**/**.css",

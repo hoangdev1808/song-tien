@@ -21,7 +21,13 @@ const copyFonts = () => {
 
 };
 
+const coppyWebfonts = () =>{
+	return src('node_modules/@fortawesome/fontawesome-free/webfonts/**.**')
+	.pipe(dest('_dist/webfonts'))
+}
+
 module.exports = {
 	copyAssets,
 	copyFonts,
+	coppyWebfonts,
 };
