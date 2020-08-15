@@ -1,0 +1,156 @@
+header
+	width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 99
+	background-color: #ffffff
+	transition: all 1s ease-in-out
+	&.active
+		transform: translateY(-100%)
+		transition: all 1s ease-in-out
+
+	nav
+		display: flex
+		align-items: center
+		align-content: center
+		padding-top: 32px
+		padding-bottom: 35px
+		width: 100%
+		@media screen and ( max-width: 1024px)
+			padding: 20px 0
+		.st-logo
+			width: 239px
+			margin-right: 73px
+			img
+				width: 100%
+			@media screen and ( max-width: 1024px)
+				width: 180px
+				margin: 0 auto
+			@media screen and ( max-width: 575px)
+				width: 140px
+			@media screen and ( max-width: 375px)
+				width: 100px
+		.main-nav
+			width: 100%
+			.nav
+				.nav-item
+					margin-left: auto
+					display: flex
+					align-items: center
+					.nav-link
+						padding: 0
+						font-size: 16px
+						font-family: "Segoe UI"
+						color: rgb(51, 51, 51)
+						text-transform: uppercase
+						letter-spacing: 0.25
+						@media screen and ( max-width: 1199px)
+							font-size: 14px
+						.material-icons
+							font-size: 24px
+							font-family: "Material Icons"
+					&.active
+						.nav-link
+							color: #af2d30
+			@media screen and ( max-width:  1024px)
+				position: absolute
+				right: -100%
+				top: 100%
+				background: #ffffff
+				transition: ease-in-out all .3s
+				.nav
+					display: flex
+					flex-direction: column
+					.nav-item
+						margin-left: 0
+						padding: 15px 0
+						border-bottom: solid 1px #af2d30
+						justify-content: center
+						&:first-child
+							border-top: solid 1px #af2d30
+						&:last-child
+							border: none
+				&.active
+					right: 0
+					transition: ease-in-out all .3s
+			.icon
+				display: flex
+				align-items: center
+				ul
+					display: flex
+					list-style: none
+					padding-left: 0
+					.nav-item
+						margin-left: 15px
+						border: none
+						.nav-link
+							padding: 0
+						&.active
+							.nav-link
+								color: #333333
+								font-weight: 700
+		.nav-mobile
+			display: none
+			@media screen and ( max-width: 1024px)
+				display: block
+				ul
+					list-style: none
+					display: flex
+					padding-left: 0
+					.nav-item
+						margin-right: 7px
+						border: none
+						.nav-link
+							padding: 0
+							font-size: 14px
+						&.active
+							.nav-link
+								color: #333333
+								font-weight: 700
+		.toggle-menu 
+			cursor: pointer
+			position: relative
+			width: 40px
+			height: 40px
+			padding: 20px
+			background: rgb(67, 92, 54)
+			border-radius: 5px
+			display: none
+			margin-left: auto
+			@media screen and ( max-width:  1024px)
+				display: block
+			&:before,
+			&:after 
+				position: absolute
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 18px
+				height: 2px
+				background-color: #af2d30
+				content: ""
+				transition: .3s all linear
+			
+
+			&:before 
+				top: 23px
+			
+
+			&:after 
+				top: 15px
+			
+
+			&.active 
+
+				&:before,
+				&:after 
+					top: 50%
+					left: 50%
+				
+
+				&:before 
+					transform: translate(-50%, -50%) rotate(45deg)
+				
+
+				&:after 
+					transform: translate(-50%, -50%) rotate(-45deg)

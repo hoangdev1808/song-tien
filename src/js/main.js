@@ -7,7 +7,7 @@ function FullPage() {
 		menu: null,
 		direction: 'vertical',
 		verticalCentered: true,
-		scrollingSpeed: 1000,
+		scrollingSpeed: 800,
 		delay: 300,
 		easing: 'swing',
 		loopBottom: false,
@@ -25,25 +25,45 @@ function FullPage() {
 		animateAnchor: false,
 
 		//events
-		onLeave: function(index, nextIndex, direction) {},
-		afterLoad: function(anchorLink, index) {},
+		onLeave: function(index, nextIndex, direction, section) {
+			if(direction =='down'){
+				$('header').addClass('active')
+			}
+		},
+		afterLoad: function(anchorLink, index) {
+			if(index == 1){
+				$('header').removeClass('active')
+			}
+		},
 		afterRender: function() {},
 	});
 }
-
+// function headerActive(){
+// 	$(window).on('scroll', function () {
+// 		if ($(window).scrollTop() > 0) {
+// 			$('header').hide()
+// 		}$('header').show()
+// 	});
+// }
 const toggleMenuMobile = () => {
-	$(".toggle-menu.mobile").on("click", function() {
+	$(".toggle-menu").on("click", function() {
 		$(this).toggleClass("active");
-		$(this).siblings(".navbar-collapse").toggleClass("active");
+		$(this).siblings(".main-nav").toggleClass("active");
 		$("body").toggleClass("disabled");
 	});
 };
-
+function moveNavitem(){
+	if ($(window).width() <= 1024.98) {
+		$('.language').appendTo('nav .nav-mobile');
+	} else {
+		$('.language').appendTo('.main-nav>.nav .icon');
+	}
+}
 // Home banner
 function homeBanner() {
 	var swiperhomebanner = new Swiper('.home-banner', {
 		loop: true,
-		speed: 1500,
+		speed: 2000,
 		autoplay: {
 			delay: 3500,
 			disableOnInteraction: false
@@ -157,6 +177,7 @@ function setBackground() {
 document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
 	new WOW().init();
+	// headerActive()
 	homeBanner();
 	toggleMenuMobile();
 	tabsDescription();
@@ -167,4 +188,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	DataBG();
 	setBackground();
 	FullPage();
+	moveNavitem()
 });

@@ -1,9 +1,40 @@
 .h-2
-	background-color: #fff
+	background-color: #eeeae7
 	padding: 0
 	box-sizing: border-box
 	.nav-left
-		width: 558px;
+		padding-top: 160px
+		padding-left: 200px
+		ul
+			padding-left: 0
+			list-style: none
+			li
+				position: relative
+				padding: 22px 0
+				border-bottom: solid 1px rgb(109, 110, 113)
+				&:first-child
+					border-top: solid 1px #fff
+				&::after
+					content: '\e87a'
+					font-size: 18px
+					color: rgb(109, 110, 113)
+					font-family: Linearicons-Free
+					position: absolute
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+				a
+					h3
+						padding-left: 30px
+						font-size: 20px
+						font-family: "Segoe UI"
+						color: rgb(109, 110, 113)
+						text-transform: uppercase
+		@media screen and ( max-width:  1440px)
+			padding-left: 0
+
+		.btn-new
+			margin-top: 40px
 	.nav-container 
 		height: 100vh
 		width: 100vw
@@ -18,7 +49,118 @@
 				width: 100%
 				height: 100%
 				position: absolute
+				transition: all .5s ease-in-out
+				cursor: pointer
+				.list-content
+					position: absolute
+					left: 0
+					bottom: 250px
+					z-index: 999
+					width: 360px
+					height: 140px
+					padding-left: 35px
+					padding-top: 30px
+					overflow: hidden
+					.desc
+						position: relative
+						z-index: 1000
+						h4
+							font-size: 22px
+							padding-bottom: 30px
+							font-family: "Segoe UI"
+							color: rgb(255, 255, 255)
+							font-weight: bold
+							text-transform: uppercase
+							text-align: left
+							text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+						a
+							font-size: 18px
+							font-family: "Segoe UI"
+							color: rgb(255, 255, 255)
+							text-transform: uppercase
+							text-align: left
+							z-index: 999
+							.lnr
+								font-size: 14px;
+								font-family: "Linearicons-Free";
+								color: rgb(255, 255, 255);
+								text-transform: uppercase;
+								padding-left: 10px
+					&::after
+						position: absolute
+						top: 0
+						left: 0
+						transform: translateX(-95%)
+						transition: all .5s ease-in-out
+						content: ''
+						width: 100%
+						height: 100%
+						background-color: #bfc4c9
+						opacity: .8
+						z-index: 1
+
+
+
+				&::after
+					content: ''
+					background-image: linear-gradient( 90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%)
+					position: absolute
+					left: 0
+					top: 0
+					width: 100%
+					height: 100%
+					z-index: 170
+					transition: all .5s ease-in-out
+				&:nth-child(1)
+					z-index: 1
+					transform: translateX(0)
+				&:nth-child(2)
+					z-index: 2
+					transform: translateX(40%)
+					@media screen and ( max-width:  1440px)
+						transform: translateX(23%)
+					@media screen and ( max-width:  1199px)
+						transform: translateX(18%)
+				&:nth-child(3)
+					z-index: 3
+					transform: translateX(58%)
+					@media screen and ( max-width:  1440px)
+						transform: translateX(48%)
+					@media screen and ( max-width:  1199px)
+						transform: translateX(38%)
 				img
 					height: 100%
 					width: 100%
 					object-fit: cover
+				&:hover
+					&:nth-child(1)
+						transform: translateX(0)
+						transition: all .5s ease-in-out
+						&::after
+							background-image: none
+							transition: all .5s ease-in-out
+					&:nth-child(2)
+						transform: translateX(20%)
+						@media screen and ( max-width:  1199px)
+							transform: translateX(5%)
+						transition: all .5s ease-in-out
+						&::after
+							background-image: none
+							transition: all .5s ease-in-out
+					&:nth-child(3)
+						transform: translateX(30%)
+						@media screen and ( max-width:  1199px)
+							transform: translateX(25%)
+						&::after
+							background-image: none
+							transition: all .5s ease-in-out
+					.list-content
+						&::after
+							transform: translateX(0)
+						.desc
+							h4
+								color: #435c36
+							a
+								color: #6d6e71
+								.lnr
+									color: #6d6e71
