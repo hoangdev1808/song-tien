@@ -6,10 +6,10 @@
 	"js": [
 		"bower_components/jquery/dist/jquery.js",
 		"bower_components/pagePiling.js/dist/jquery.pagepiling.js",
+		"bower_components/swiper/dist/js/swiper.min.js",
 		"bower_components/jquery-ui/jquery-ui.min.js",
 		"bower_components/bootstrap/dist/js/bootstrap.min.js",
-		"bower_components/swiper/dist/js/swiper.min.js",
-		"bower_components/fancybox/dist/jquery.fancybox.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.js",
 		"bower_components/wow/dist/wow.min.js"
 	],
 	"css": [

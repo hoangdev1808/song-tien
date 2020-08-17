@@ -3,7 +3,7 @@ header
 	position: fixed
 	top: 0
 	left: 0
-	z-index: 99
+	z-index: 1000
 	background-color: #ffffff
 	transition: all 1s ease-in-out
 	&.active
@@ -32,8 +32,18 @@ header
 			@media screen and ( max-width: 375px)
 				width: 100px
 		.main-nav
+			display: flex
 			width: 100%
+			.Module
+				display: flex
+				width: 90%
+				.ModuleContent
+					width: 100%
+					.nav
+						width: 100%
 			.nav
+				float: left
+				width: 90%
 				.nav-item
 					margin-left: auto
 					display: flex
@@ -50,9 +60,14 @@ header
 						.material-icons
 							font-size: 24px
 							font-family: "Material Icons"
+					&:hover
+						.nav-link
+							color: #af2d30
 					&.active
 						.nav-link
 							color: #af2d30
+					&:first-child
+						margin-left: 0
 			@media screen and ( max-width:  1024px)
 				position: absolute
 				right: -100%
@@ -77,37 +92,44 @@ header
 			.icon
 				display: flex
 				align-items: center
-				ul
+				margin-left: auto
+				#desktop
 					display: flex
-					list-style: none
-					padding-left: 0
-					.nav-item
-						margin-left: 15px
-						border: none
-						.nav-link
-							padding: 0
-						&.active
+					ul
+						display: flex
+						list-style: none
+						padding-left: 0
+						.nav-item
+							margin-left: 15px
+							border: none
 							.nav-link
-								color: #333333
-								font-weight: 700
+								padding: 0
+							&.active
+								.nav-link
+									color: #333333
+									font-weight: 700
+				.search
+					margin-left: 15px
 		.nav-mobile
 			display: none
 			@media screen and ( max-width: 1024px)
 				display: block
-				ul
-					list-style: none
+				#desktop
 					display: flex
-					padding-left: 0
-					.nav-item
-						margin-right: 7px
-						border: none
-						.nav-link
-							padding: 0
-							font-size: 14px
-						&.active
+					ul
+						list-style: none
+						display: flex
+						padding-left: 0
+						.nav-item
+							margin-right: 7px
+							border: none
 							.nav-link
-								color: #333333
-								font-weight: 700
+								padding: 0
+								font-size: 14px
+							&.active
+								.nav-link
+									color: #333333
+									font-weight: 700
 		.toggle-menu 
 			cursor: pointer
 			position: relative

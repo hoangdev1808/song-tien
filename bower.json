@@ -25,6 +25,7 @@
     "aos": "^2.3.4",
     "jquery-ui": "^1.12.1",
     "pagePiling.js": "pagepiling.js#^1.5.6",
-    "jquery-modal": "^0.9.1"
+    "jquery-modal": "^0.9.1",
+    "fullpage.js": "^3.0.9"
   }
 }

@@ -18,14 +18,20 @@ html(lang="en")
 				block header
 					include _header.pug
 				block banner,breadcrumb
-				main
+				main#pagepiling
 					block main
 					#js-page-verify(class=bodyClass hidden)
 				block footer
 					include _footer.pug
 			include _tool.pug
+			#searchfancybox.searchbox(style='display: none;')
+				.container
+					.content
+						.form-group
+							input.form-control(type="text" placeholder="Tìm kiếm...")
+							button.searchbutton.btn.btn__search
+								em.material-icons search
 		script(type="text/javascript" src="./js/core.min.js")
 		script(type="text/javascript" src="./js/main.min.js")
 		script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
-
 		block scripts

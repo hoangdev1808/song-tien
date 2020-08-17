@@ -3,48 +3,46 @@ import Cookie from "./lib/Cookie";
 import MoveElement from "./lib/MoveElement"
 
 function FullPage() {
-	$('#pagepiling').pagepiling({
-		menu: null,
-		direction: 'vertical',
-		verticalCentered: true,
-		scrollingSpeed: 800,
-		delay: 300,
-		easing: 'swing',
-		loopBottom: false,
-		loopTop: false,
-		navigation: {
-			'textColor': '#fff',
-			'position': 'right',
-			'tooltips': ['TRANG CHỦ', 'LĨNH VỰC KINH DOANH', 'TIN TỨC', 'ĐỐI TÁC', 'LIÊN HỆ']
-		},
-		normalScrollElements: null,
-		normalScrollElementTouchThreshold: 5,
-		touchSensitivity: 5,
-		keyboardScrolling: true,
-		sectionSelector: '.section',
-		animateAnchor: false,
+	if ($(window).width() >= 1025) {
+		$('body').css('overflow', 'hidden')
+		$('#pagepiling').pagepiling({
+			//events
+			onLeave: function(index, nextIndex, direction, section) {
+				if (direction == 'down') {
+					$('header').addClass('active')
+				}
+			},
+			afterLoad: function(anchorLink, index) {
+				if (index == 1) {
+					$('header').removeClass('active')
+				}
+			},
+			afterRender: function() {},
+		});
+	}$('body').css('overflow', 'auto')
+}
 
-		//events
-		onLeave: function(index, nextIndex, direction, section) {
-			if(direction =='down'){
-				$('header').addClass('active')
-			}
-		},
-		afterLoad: function(anchorLink, index) {
-			if(index == 1){
-				$('header').removeClass('active')
-			}
-		},
-		afterRender: function() {},
+function footerNone() {
+	if ($('#pagepiling').length > 0) {
+		$('footer').addClass('active')
+	} else {
+		$('footer').removeClass('active')
+	}
+}
+// Home banner
+function homeBanner() {
+	var swiperhomebanner = new Swiper('.home-banner', {
+		loop: true,
+		speed: 2500,
+		watchSlidesProgress: true,
+		mousewheelControl: true,
+		keyboardControl: true,
+		// autoplay: {
+		// 	delay: 3500,
+		// 	disableOnInteraction: false
+		// },
 	});
 }
-// function headerActive(){
-// 	$(window).on('scroll', function () {
-// 		if ($(window).scrollTop() > 0) {
-// 			$('header').hide()
-// 		}$('header').show()
-// 	});
-// }
 const toggleMenuMobile = () => {
 	$(".toggle-menu").on("click", function() {
 		$(this).toggleClass("active");
@@ -52,23 +50,13 @@ const toggleMenuMobile = () => {
 		$("body").toggleClass("disabled");
 	});
 };
-function moveNavitem(){
+
+function moveNavitem() {
 	if ($(window).width() <= 1024.98) {
-		$('.language').appendTo('nav .nav-mobile');
+		$('#desktop').appendTo('nav .nav-mobile');
 	} else {
-		$('.language').appendTo('.main-nav>.nav .icon');
+		$('#desktop').appendTo('.main-nav>.nav .icon');
 	}
-}
-// Home banner
-function homeBanner() {
-	var swiperhomebanner = new Swiper('.home-banner', {
-		loop: true,
-		speed: 2000,
-		autoplay: {
-			delay: 3500,
-			disableOnInteraction: false
-		},
-	});
 }
 
 function tabsDescription() {
@@ -176,8 +164,7 @@ function setBackground() {
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
-	new WOW().init();
-	// headerActive()
+	FullPage();
 	homeBanner();
 	toggleMenuMobile();
 	tabsDescription();
@@ -187,6 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	subMenuMobile();
 	DataBG();
 	setBackground();
-	FullPage();
-	moveNavitem()
+	moveNavitem();
+	footerNone()
+	window.addEventListener("resize", () => {
+		homeBanner();
+		toggleMenuMobile();
+		moveNavitem();
+	})
 });
