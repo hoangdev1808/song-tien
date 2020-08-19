@@ -1,141 +1,145 @@
 .h-5
-	background-image: url('../assets/images/index/liehe-bg.png')
-	background-size: cover
-	background-position: center
-	&__infor
+	padding: 0
+	.left
+		display: flex
+		align-items: center
+		justify-content: flex-end
 		width: 100%
-		padding-right: 75px
-		h1
-			font-size: 30px
-			font-family: "Segoe UI"
-			color: rgb(67, 92, 54)
-			font-weight: bold
-			text-transform: uppercase
-			@media screen and ( max-width: 1199px)
-				font-size: 25px
-		ul
-			position: relative
-			width: 420px
-			height: 458px
-			padding-left: 0
-			list-style: none
-			li
-				padding: 22px 25px 22px 0
-				border-bottom: solid 1px rgb(109, 110, 113)
-
-				h2
-					font-size: 18px
+		height: 100vh
+		background-color: #eeeae7
+		&-content
+			width: 615px
+			&__infor
+				width: 100%
+				padding-right: 75px
+				h1
+					font-size: 30px
 					font-family: "Segoe UI"
 					color: rgb(67, 92, 54)
 					font-weight: bold
 					text-transform: uppercase
-					text-align: left
-					padding-bottom: 15px
-				p
-					font-size: 18px
-					font-family: "Segoe UI"
-					color: rgb(109, 110, 113)
-					padding-right: 60px
-			.img
-				position: absolute
-				top: 70px
-				right: -50px
-		@media screen and ( max-width:  1200px)
-			padding-right: 0
-			ul
-				width: 100%
-	.contact-form
+					@media screen and ( max-width: 1199px)
+						font-size: 25px
+				ul
+					position: relative
+					width: 420px
+					height: 458px
+					padding-left: 0
+					list-style: none
+					li
+						padding: 22px 25px 22px 0
+						border-bottom: solid 1px rgb(109, 110, 113)
+
+						h2
+							font-size: 18px
+							font-family: "Segoe UI"
+							color: rgb(67, 92, 54)
+							font-weight: bold
+							text-transform: uppercase
+							text-align: left
+							padding-bottom: 15px
+						p
+							font-size: 18px
+							font-family: "Segoe UI"
+							color: rgb(109, 110, 113)
+							padding-right: 60px
+					.img
+						position: absolute
+						top: 10%
+						right: 0
+				@media screen and ( max-width:  1200px)
+					padding-right: 0
+					ul
+						width: 100%
+	.right
+		background-color: #435c36
 		width: 100%
-		height: 458px
-		padding-left: 55px
-		.title
-			margin-bottom: 35px
-			h2
+		height: 100vh
+		display: flex
+		align-items: center
+		.contact-form
+			width: 615px
+			height: 458px
+			padding-left: 55px
+			.title
+				margin-bottom: 35px
+				h2
+					position: relative
+					font-size: 30px
+					font-family: "Segoe UI"
+					color: rgb(238, 234, 231)
+					font-weight: bold
+					text-transform: uppercase
+					&::after
+						content: ''
+						position: absolute
+						left: 0
+						bottom: -10px
+						width: 108px 
+						height: 1px
+						background-color: rgb(238, 234, 231)
+			.form-group
 				position: relative
-				font-size: 30px
-				font-family: "Segoe UI"
-				color: rgb(238, 234, 231)
-				font-weight: bold
-				text-transform: uppercase
-				&::after
-					content: ''
+				span
+					display: flex
+					align-items: center
 					position: absolute
-					left: 0
-					bottom: -10px
-					width: 108px 
-					height: 1px
-					background-color: rgb(238, 234, 231)
-		.form-group
-			margin-bottom: 20px
-			input
-				border: 1px solid rgb(238, 234, 231)
-				box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05)
-				width: 100%
-				height: 43px
-				padding-left: 20px
-				font-size: 18px
-				background: none
-				color: #fff
-				&::placeholder
-					font-size: 18px
+					right: 2%
+					top: 25%
+					color: red
 					font-family: "Segoe UI"
-					color: rgb(238, 234, 231)
-			textarea
-				border-width: 1px
-				border-color: rgb(238, 234, 231)
-				border-style: solid
-				width: 543px
-				height: 118px
-				margin-bottom: 10px
-				background: none
-				padding-left: 20px
-				&::placeholder
-					font-size: 18px
-					font-family: "Segoe UI"
-					color: rgb(238, 234, 231)
-		.frm-btnwrap
-			display: flex
-			justify-content: flex-end
-			.frm-btn
-				position: relative
-				width: 150px
-				height: 50px
-				.frm-btn-reset
-					display: none
+					&.fa
+						&::before
+							content: 'warning'
+							font-family: 'Material Icons'
+				margin-bottom: 20px
 				input
+					border: 1px solid rgb(238, 234, 231)
+					box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05)
 					width: 100%
-					height: 100%
-					background: #fff
+					height: 43px
+					padding-left: 20px
 					font-size: 18px
-					font-family: "Segoe UI"
-					color: rgb(67, 92, 54)
-					text-transform: uppercase
-					border: none
-					display: flex
-					align-items: center
-					justify-content: center
-				&:hover
-					background-image: linear-gradient( -54deg, rgb(214,144,143) 0%, rgb(164,55,50) 36%)
+					background: none
 					color: #fff
-					.lnr
-						color: #fff
-				.lnr
-					font-size: 18px
-					font-family: "Linearicons-Free"
-					color: rgb(67, 92, 54)
-					text-transform: upperc
-				input.btn-new
+					&::placeholder
+						font-size: 18px
+						font-family: "Segoe UI"
+						color: rgb(238, 234, 231)
+				textarea
+					border-width: 1px
+					border-color: rgb(238, 234, 231)
+					border-style: solid
 					width: 100%
-					height: 100%
-					background: #fff
-					font-size: 18px
-					font-family: "Segoe UI"
-					color: rgb(67, 92, 54)
-					text-transform: uppercase
-					border: none
-					display: flex
-					align-items: center
-					justify-content: center
+					height: 118px
+					margin-bottom: 10px
+					background: none
+					padding-left: 20px
+					&::placeholder
+						font-size: 18px
+						font-family: "Segoe UI"
+						color: rgb(238, 234, 231)
+			.frm-btnwrap
+				display: flex
+				justify-content: flex-end
+				.frm-btn
+					position: relative
+					width: 150px
+					height: 50px
+					.frm-btn-reset
+						display: none
+					input
+						width: 100%
+						height: 100%
+						background: #fff
+						font-size: 18px
+						font-family: "Segoe UI"
+						color: rgb(67, 92, 54)
+						text-transform: uppercase
+						border: none
+						display: flex
+						align-items: center
+						justify-content: center
 					&:hover
 						background-image: linear-gradient( -54deg, rgb(214,144,143) 0%, rgb(164,55,50) 36%)
 						color: #fff
@@ -145,54 +149,108 @@
 						font-size: 18px
 						font-family: "Linearicons-Free"
 						color: rgb(67, 92, 54)
-						text-transform: uppercase
-						padding-left: 20px
-		@media screen and ( max-width: 1200px)
-			padding-left: 0
-		@media screen and ( max-width:  1199px)
-			.title
-				h2
-					font-size: 25px
-			.form-group
-				width: 100%
-				input,
-				textarea
-					width: 100%
-.footer-home
-	width: 100%
-	margin-left: auto
-	padding-top: 30px
-	padding-bottom: 50px
-	background-color: #ffffff
-	position: absolute
-	bottom: 0
-	left: 0
-	ul
-		padding-left: 0
-		list-style: none
-		display: flex
-		li
-			a
-				font-size: 16px
-				font-family: "Segoe UI"
-				color: rgb(67, 92, 54)
-	.social-icon
-		display: flex
-		justify-content: flex-end
-		ul
-			display: flex
-			list-style: none
-			li
-				width: 28px
-				height: 28px
-				border: solid 1px rgb(67, 92, 54)
-				border-radius: 50%
-				margin-right: 10px
-				line-height: 28px
-				text-align: center
-				a
-					.fa
-						font-size: 16px
+						text-transform: upperc
+					.btn-new
+						width: 100%
+						height: 100%
+						background: #fff
+						font-size: 18px
+						font-family: "Segoe UI"
 						color: rgb(67, 92, 54)
-						&:nth-child(2)
-							border: none
+						text-transform: uppercase
+						border: none
+						display: flex
+						align-items: center
+						justify-content: center
+						&:hover
+							background-image: linear-gradient( -54deg, rgb(214,144,143) 0%, rgb(164,55,50) 36%)
+							color: #fff
+							.lnr
+								color: #fff
+						.lnr
+							font-size: 18px
+							font-family: "Linearicons-Free"
+							color: rgb(67, 92, 54)
+							text-transform: uppercase
+							padding-left: 20px
+			@media screen and ( max-width: 1200px)
+				padding-left: 0
+			@media screen and ( max-width:  1199px)
+				.title
+					h2
+						font-size: 24px
+				.form-group
+					width: 100%
+					input,
+					textarea
+						width: 100%
+	@media screen and ( max-width: 1199px)
+		.left
+			align-items: flex-start
+			padding: 60px 15px
+			&-content
+				width: 100%
+		.right
+			align-items: flex-start
+			padding: 60px 15px
+	@media screen and ( max-width: 1024px)
+		position: relative
+		.left
+			align-items: flex-start
+			padding: 30px 15px
+			height: unset
+			&-content
+				width: 100%
+		.right
+			align-items: flex-start
+			padding: 30px 15px
+			height: unset
+			.contact-form
+				height: auto
+				width: 100%
+	.footer-home
+		width: 100%
+		margin-left: auto
+		padding-top: 30px
+		padding-bottom: 50px
+		background-color: #ffffff
+		position: absolute
+		bottom: 0
+		left: 0
+		ul
+			padding-left: 0
+			list-style: none
+			display: flex
+			li
+				a
+					font-size: 16px
+					font-family: "Segoe UI"
+					color: rgb(67, 92, 54)
+			@media screen and ( max-width: 768px)
+				justify-content: center
+		.social-icon
+			display: flex
+			justify-content: flex-end
+			ul
+				display: flex
+				list-style: none
+				li
+					width: 28px
+					height: 28px
+					border: solid 1px rgb(67, 92, 54)
+					border-radius: 50%
+					margin-right: 10px
+					line-height: 28px
+					text-align: center
+					a
+						.fa
+							font-size: 16px
+							color: rgb(67, 92, 54)
+							&:nth-child(2)
+								border: none
+		@media screen and ( max-width: 1024px)
+			padding: 30px 0
+			position: static
+		@media screen and ( max-width:  768px)
+			.social-icon
+				justify-content: center

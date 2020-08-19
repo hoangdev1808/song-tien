@@ -4,7 +4,6 @@ import MoveElement from "./lib/MoveElement"
 
 function FullPage() {
 	if ($(window).width() >= 1025) {
-		$('body').css('overflow', 'hidden')
 		$('#pagepiling').pagepiling({
 			//events
 			onLeave: function(index, nextIndex, direction, section) {
@@ -19,7 +18,7 @@ function FullPage() {
 			},
 			afterRender: function() {},
 		});
-	}$('body').css('overflow', 'auto')
+	}
 }
 
 function footerNone() {
@@ -160,10 +159,16 @@ function setBackground() {
 		});
 	});
 }
-
+function checkMain(){
+	var heightheader = $('header').outerHeight()
+	if($('#pagepiling').length<1){
+		$('main').css('padding-top', heightheader)
+	}
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
+	checkMain();
 	FullPage();
 	homeBanner();
 	toggleMenuMobile();

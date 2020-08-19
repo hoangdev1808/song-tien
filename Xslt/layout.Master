@@ -159,7 +159,7 @@
 				<div class="container">
 					<div class="content">
 						<div class="form-group">
-							 <portal:modulewrapper id="mdl153" runat="server" configuremoduleid="153" />
+							<portal:modulewrapper id="mdl153" runat="server" configuremoduleid="153" />
 						</div>
 					</div>
 				</div>
