@@ -9,14 +9,18 @@ function FullPage() {
 			onLeave: function(index, nextIndex, direction, section) {
 				if (direction == 'down') {
 					$('header').addClass('active')
+					$('#block__tool').css('bottom', 0)
 				}
 			},
 			afterLoad: function(anchorLink, index) {
 				if (index == 1) {
-					$('header').removeClass('active')
+					$('header').removeClass('active');
+					$('#block__tool').css('bottom', 275);
 				}
 			},
-			afterRender: function() {},
+			afterRender: function() {
+				$('#block__tool').css('bottom', 275);
+			},
 		});
 	}
 }
@@ -165,7 +169,12 @@ function checkMain(){
 		$('main').css('padding-top', heightheader)
 	}
 }
-
+function tool(){
+	$('#block__tool').find('.tool-ganeral').on('click', function(j){
+		j.preventDefault();
+		$('#block__tool').find('ul').slideToggle()
+	})
+}
 document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
 	checkMain();
@@ -186,4 +195,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		toggleMenuMobile();
 		moveNavitem();
 	})
+	tool();
 });

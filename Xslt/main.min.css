@@ -1450,21 +1450,21 @@ main {
 	transition: ease-in-out all .3s;
 	cursor: pointer;
 	margin-right: 20px;
-	border: solid 1px #01a8e3;
+	border: solid 1px #0f69ab;
 	background-color: #fff;
 	width: 38px;
 	height: 38px
 }
 
 .pages .modulepager .pagination li a {
-	color: #01a8e3;
+	color: #0f69ab;
 	font-family: Montserrat;
 	font-size: 18px;
 	text-decoration: none
 }
 
 .pages .modulepager .pagination li:hover {
-	background-color: #01a8e3
+	background-color: #0f69ab
 }
 
 .pages .modulepager .pagination li:hover a {
@@ -1472,7 +1472,7 @@ main {
 }
 
 .pages .modulepager .pagination li.active span {
-	background-color: #01a8e3;
+	background-color: #0f69ab;
 	color: #fff
 }
 
@@ -1521,7 +1521,7 @@ main {
 	position: absolute;
 	bottom: -1.5px;
 	left: 0;
-	background-color: #01a8e3;
+	background-color: #0f69ab;
 	width: 100%;
 	height: 2px;
 	content: ''
@@ -1730,6 +1730,7 @@ main {
 }
 
 .fancybox-content .content .form-group {
+	position: relative;
 	width: 100%
 }
 
@@ -1886,6 +1887,123 @@ main {
 
 .search-page {
 	padding: 70px 0
+}
+
+.search-page .search-page-top .page-header h1 {
+	color: #333;
+	font-family: "Segoe UI";
+	font-size: 36px;
+	font-weight: 700;
+	text-transform: uppercase
+}
+
+@media (max-width:1025px) {
+	.search-page .search-page-top .page-header h1 {
+		font-size: 26px
+	}
+}
+
+.search-page .search-page-top .searchcontrols {
+	padding: 30px 0
+}
+
+.search-page .search-page-top .searchcontrols .form-inline .form-group .form-control {
+	outline: 0;
+	border-radius: 0;
+	height: 40px
+}
+
+.search-page .search-page-top .searchcontrols .form-inline .form-group .form-control:focus {
+	-webkit-box-shadow: none;
+	outline: 0;
+	box-shadow: none;
+	border-color: transparent
+}
+
+.search-page .search-page-top .searchcontrols .form-inline .form-group .seachpage-btn {
+	border-radius: 0;
+	background-color: #435c36;
+	padding: 0 15px;
+	width: 120px;
+	height: 40px;
+	color: #fff
+}
+
+.search-page .searchresults .modulepager {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	padding-bottom: 30px
+}
+
+.search-page .searchresults .modulepager .pagination {
+	padding: 0;
+	list-style: none
+}
+
+.search-page .searchresults .modulepager .pagination li {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-transition: ease-in-out all .3s;
+	-o-transition: ease-in-out all .3s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: ease-in-out all .3s;
+	cursor: pointer;
+	margin-right: 20px;
+	background-color: #fff;
+	width: 38px;
+	height: 38px
+}
+
+.search-page .searchresults .modulepager .pagination li a {
+	width: 100%;
+	height: 100%;
+	color: #435c36;
+	font-family: 'Segoe UI';
+	font-size: 18px;
+	line-height: 38px;
+	text-align: center;
+	text-decoration: none
+}
+
+.search-page .searchresults .modulepager .pagination li:hover {
+	background-color: #a43732
+}
+
+.search-page .searchresults .modulepager .pagination li:hover a {
+	color: #fff
+}
+
+.search-page .searchresults .modulepager .pagination li.active {
+	background-color: #a43732
+}
+
+.search-page .searchresults .modulepager .pagination li.active span {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	line-height: 38px;
+	text-align: center
+}
+
+.search-page .searchresultlist .searchresult .NeatHtml h1 {
+	font-family: 'Segoe UI';
+	font-size: 25px
+}
+
+.search-page .searchresultlist .searchresult .NeatHtml h1 a {
+	color: #333;
+	font-size: 25px;
+	font-weight: 700
 }
 
 html {
@@ -7313,7 +7431,7 @@ header nav .toggle-menu.active:after {
 #loading-container #progress-bar {
 	-webkit-animation: background 10s linear infinite forwards;
 	animation: background 10s linear infinite forwards;
-	background-color: #01a8e3;
+	background-color: #0f69ab;
 	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .3) 50%, rgba(255, 255, 255, .3) 75%, transparent 75%, transparent);
 	background-image: linear-gradient(45deg, rgba(255, 255, 255, .3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .3) 50%, rgba(255, 255, 255, .3) 75%, transparent 75%, transparent);
 	background-repeat: repeat;
@@ -7335,21 +7453,32 @@ header nav .toggle-menu.active:after {
 	-webkit-transition: ease-in-out all .3s;
 	-o-transition: ease-in-out all .3s;
 	position: fixed;
-	top: 287px;
 	left: 20px !important;
 	opacity: 1;
 	z-index: 99;
 	transition: ease-in-out all .3s
 }
+#block__tool .tool-ganeral{
+	transition: .3s all ease-in-out;
+	cursor: pointer;
+	margin-bottom: 10px;
+	border-radius: 0;
+	background-color: #435c36;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
 
-#block__tool .tool-ganeral:hover ul {
-	visibility: visible
+.tool-ganeral em{
+	font-size: 18px;
+	color: #fff;
 }
 
 #block__tool ul {
-	visibility: hidden;
 	padding: 0;
-	list-style: none
+	list-style: none;
+	display: none;
 }
 
 #block__tool ul li {
@@ -7360,14 +7489,14 @@ header nav .toggle-menu.active:after {
 	margin-bottom: 10px;
 	border-radius: 0;
 	background-color: #435c36;
-	width: 56px;
-	height: 56px;
-	line-height: 56px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
 	text-align: center
 }
 
 #block__tool ul li a {
-	padding: 0
+	padding: 5px;
 }
 
 #block__tool ul li:hover {
@@ -7421,7 +7550,7 @@ header nav .toggle-menu.active:after {
 }
 
 .global-breadcrumb .breadcrumb li:hover a {
-	color: #01a8e3
+	color: #0f69ab
 }
 
 .global-breadcrumb .breadcrumb li:first-child {
@@ -7652,9 +7781,13 @@ header nav .toggle-menu.active:after {
 
 .h-2 .nav-left {
 	padding-top: 160px;
-	padding-left: 200px
+	padding-left: 160px
 }
-
+@media screen and ( max-width: 1366px){
+	.h-2 .nav-left .block-title h2{
+		font-size: 26px;
+	}
+}
 .h-2 .nav-left ul {
 	padding-left: 0;
 	list-style: none
@@ -7812,9 +7945,7 @@ header nav .toggle-menu.active:after {
 	left: 0;
 	z-index: 170;
 	transition: all 1s ease-in-out;
-	background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .6)), color-stop(50%, rgba(0, 0, 0, 0)));
-	background-image: -o-linear-gradient(left, rgba(0, 0, 0, .6) 0, rgba(0, 0, 0, 0) 50%);
-	background-image: linear-gradient(90deg, rgba(0, 0, 0, .6) 0, rgba(0, 0, 0, 0) 50%);
+	background-color:  rgba(0, 0, 0, .5);
 	width: 100%;
 	height: 100%;
 	content: ''
@@ -7832,7 +7963,7 @@ header nav .toggle-menu.active:after {
 }
 
 .h-2 .nav-container .nav-lists .nav-list:hover::after {
-	background-image: none
+	background: none
 }
 
 .h-2 .nav-container .nav-lists .nav-list:hover .list-content::after {
@@ -7862,20 +7993,65 @@ header nav .toggle-menu.active:after {
 }
 
 .h-3__item figure {
+	cursor: pointer;
 	width: 100%;
 	height: 100%
 }
 
 .h-3__item figure .img {
+	position: relative;
 	width: 100%;
-	height: 285px
+	height: 285px;
+	overflow: hidden
+}
+
+.h-3__item figure .img::before {
+	-webkit-transition: ease-in-out all .3s;
+	-o-transition: ease-in-out all .3s;
+	position: absolute;
+	z-index: 2;
+	transition: ease-in-out all .3s;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	content: ''
 }
 
 .h-3__item figure .img img {
 	-o-object-fit: cover;
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transition: ease-in-out all .3s;
+	-o-transition: ease-in-out all .3s;
+	transform: scale(1.1);
+	transition: ease-in-out all .3s;
 	width: 100%;
 	height: 100%;
 	object-fit: cover
+}
+
+.h-3__item figure .img .box-read {
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	z-index: 3
+}
+
+.h-3__item figure .img .box-read .btn-new {
+	border: none;
+	width: 160px;
+	height: 38px;
+	color: #fff;
+	line-height: 38px
+}
+
+.h-3__item figure .img .box-read .btn-new .lnr {
+	padding-left: 7px;
+	color: #fff
 }
 
 .h-3__item figure figcaption .title {
@@ -7910,6 +8086,20 @@ header nav .toggle-menu.active:after {
 	width: 57px;
 	height: 1px;
 	content: ''
+}
+
+.h-3__item figure:hover .img img {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1)
+}
+
+.h-3__item figure:hover .img::before {
+	background-color: rgba(0, 0, 0, .3)
+}
+
+.h-3__item figure:hover .img .box-read {
+	visibility: visible
 }
 
 .h-3__item figure:hover figcaption .title h3 {
@@ -7971,11 +8161,7 @@ header nav .toggle-menu.active:after {
 	padding: 0
 }
 
-.h-4__list {
-	padding-top: 115px
-}
-
-.h-4__list .item {
+.h-4__list .row {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	-webkit-box-pack: center;
@@ -7984,24 +8170,46 @@ header nav .toggle-menu.active:after {
 	display: -ms-flexbox;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	width: 100%
+	justify-content: center
+}
+
+.h-4__list .item {
+	width: 100%;
+	height: 235px;
+	padding: 0 25px;
+}
+
+.h-4__list .item .title {
+	text-align: center;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+.h-4__list .item .title h3 {
+	color: #435c36;
+	font-family: "Segoe UI";
+	font-size: 15px;
+	text-align: center;
+	text-transform: uppercase
 }
 
 .h-4__list .item .img {
-	height: 140px
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	text-align: center
 }
 
 .h-4__list .item .img img {
 	-o-object-fit: contain;
-	width: 100%;
 	height: 100%;
 	object-fit: contain
-}
-
-.h-4__list .item:nth-child(4),
-.h-4__list .item:nth-child(5) {
-	margin-top: 120px
 }
 
 @media screen and (max-width:1199px) {
@@ -8010,16 +8218,12 @@ header nav .toggle-menu.active:after {
 	}
 
 	.h-4__list .item {
-		margin-bottom: 30px
+		margin-bottom: 30px;
+		height: 213px
 	}
 
-	.h-4__list .item .img {
-		height: 70px
-	}
-
-	.h-4__list .item:nth-child(4),
-	.h-4__list .item:nth-child(5) {
-		margin-top: 0
+	.h-4__list .item .title {
+		padding-bottom: 15px
 	}
 }
 
@@ -8031,27 +8235,49 @@ header nav .toggle-menu.active:after {
 	.h-4__list {
 		padding-top: 0
 	}
+
+	.h-4__list .item .title h3 {
+		font-size: 14px
+	}
+}
+
+@media screen and (max-width:768.98px) {
+	.h-4__list .item {
+		height: 140px
+	}
+	.h-4__list .item .title{
+		height: 60px;
+	}
+	.h-4__list .item .img {
+		height: 80px;
+	}
 }
 
 .h-5 {
-	padding: 0
+	padding: 0;
 }
 
 .h-5 .left {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-box-pack: end;
-	-ms-flex-pack: end;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
 	justify-content: flex-end;
 	background-color: #eeeae7;
 	width: 100%;
-	height: 100vh
+	height: 100vh;
+	padding-top: 155px;
 }
-
+@media screen and ( max-width: 1366px){
+	.h-5 .left
+	{
+		align-items: flex-start;
+		padding-top: 70px;
+	}
+}
+@media screen and ( max-width: 1280px){
+	.h-5 .left{
+		align-items: center;
+		padding-top: 0;
+	}
+}
 .h-5 .left-content {
 	width: 615px
 }
@@ -8069,7 +8295,7 @@ header nav .toggle-menu.active:after {
 	text-transform: uppercase
 }
 
-@media screen and (max-width:1199px) {
+@media screen and (max-width: 1366px) {
 	.h-5 .left-content__infor h1 {
 		font-size: 25px
 	}
@@ -8082,12 +8308,25 @@ header nav .toggle-menu.active:after {
 	height: 458px;
 	list-style: none
 }
+@media screen and ( max-width: 1280px){
+	.h-5 .left-content__infor ul{
+		width: 100%;
+		height: auto;
+	}
+}
 
 .h-5 .left-content__infor ul li {
 	border-bottom: solid 1px #6d6e71;
 	padding: 22px 25px 22px 0
 }
-
+@media screen and ( max-width: 1366px){
+	.h-5 .left-content__infor ul li{
+		padding: 10px 0;
+	}
+	.h-5 .left-content__infor ul li p{
+		font-size: 16px;
+	}
+}
 .h-5 .left-content__infor ul li h2 {
 	padding-bottom: 15px;
 	color: #435c36;
@@ -8122,21 +8361,32 @@ header nav .toggle-menu.active:after {
 }
 
 .h-5 .right {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
 	background-color: #435c36;
 	width: 100%;
-	height: 100vh
+	height: 100vh;
+	padding-top: 155px;
 }
-
+@media screen and ( max-width: 1366px){
+	.h-5 .right{
+		align-items: flex-start;
+		padding-top: 70px;
+	}
+}
+@media screen and ( max-width: 1280px){
+	.h-5 .right{
+		align-items: center;
+		padding-top: 0;
+	}
+}
 .h-5 .right .contact-form {
 	padding-left: 55px;
 	width: 615px;
-	height: 458px
+}
+@media screen and ( max-width: 1366px){
+	.h-5 .right .contact-form{
+		height: unset;
+	}
 }
 
 .h-5 .right .contact-form .title {
@@ -8150,6 +8400,11 @@ header nav .toggle-menu.active:after {
 	font-size: 30px;
 	font-weight: 700;
 	text-transform: uppercase
+}
+@media screen and ( max-width: 1366px){
+	.h-5 .right .contact-form .title h2{
+		font-size: 25px;
+	}
 }
 
 .h-5 .right .contact-form .title h2::after {
@@ -8166,7 +8421,11 @@ header nav .toggle-menu.active:after {
 	position: relative;
 	margin-bottom: 20px
 }
-
+@media screen and ( max-width: 1366px){
+	.h-5 .right .contact-form .form-group{
+		margin-bottom: 15px;
+	}
+}
 .h-5 .right .contact-form .form-group span {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -8201,31 +8460,31 @@ header nav .toggle-menu.active:after {
 .h-5 .right .contact-form .form-group input::-webkit-input-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group input::-moz-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group input:-ms-input-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group input::-ms-input-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group input::placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group textarea {
@@ -8242,31 +8501,31 @@ header nav .toggle-menu.active:after {
 .h-5 .right .contact-form .form-group textarea::-webkit-input-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group textarea::-moz-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group textarea:-ms-input-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group textarea::-ms-input-placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .form-group textarea::placeholder {
 	color: #eeeae7;
 	font-family: "Segoe UI";
-	font-size: 18px
+	font-size: 14px
 }
 
 .h-5 .right .contact-form .frm-btnwrap {
@@ -8282,6 +8541,11 @@ header nav .toggle-menu.active:after {
 	position: relative;
 	width: 150px;
 	height: 50px
+}
+@media screen and ( max-width: 1366px){
+	.h-5 .right .contact-form .frm-btnwrap .frm-btn{
+		height: 40px;
+	}
 }
 
 .h-5 .right .contact-form .frm-btnwrap .frm-btn .frm-btn-reset {
@@ -8466,6 +8730,9 @@ header nav .toggle-menu.active:after {
 		-ms-flex-pack: center;
 		justify-content: center
 	}
+	.h-5 .footer-home ul li a{
+		font-size: 12px;
+	}
 }
 
 .h-5 .footer-home .social-icon {
@@ -8503,13 +8770,17 @@ header nav .toggle-menu.active:after {
 	border: none
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1366px) {
 	.h-5 .footer-home {
-		position: static;
-		padding: 30px 0
+		padding: 20px 0
 	}
 }
-
+@media screen and (max-width: 1024px) {
+	.h-5 .footer-home {
+		position: static;
+		padding: 20px 0
+	}
+}
 @media screen and (max-width:768px) {
 	.h-5 .footer-home .social-icon {
 		-webkit-box-pack: center;

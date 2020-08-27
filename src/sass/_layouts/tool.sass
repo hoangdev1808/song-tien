@@ -1,38 +1,30 @@
+
 #block__tool
 	position: fixed
 	top: 287px
-	right: 20px
+	left: 20px !important
 	z-index: 99
 	opacity: 1
 	transition: ease-in-out all .3s
+	.tool-ganeral
+		&:hover
+			ul
+				visibility: visible
 	ul
 		padding: 0
 		list-style: none
-
-	li
-		width: 60px
-		height: 60px
-		background-color: rgb(15, 105, 171)
-		border-radius: 3px
-		border: solid 2px rgb(127, 216, 255)
-		margin-bottom: 10px
-		display: flex
-		align-items: center
-		justify-content: center
-		transition: .3s all ease-in-out
-		cursor: pointer
-		a
-			color: #fff
-			font-size: 30px
-			font-weight: 900
-
-	@media(min-width: 1025px)
-		&:hover
-			background-color: #fff
-			a
-				color: $main-color
-
-	&.active
-		opacity: 0
 		visibility: hidden
-		transition: .3s all ease-in-out
+		li
+			width: 56px
+			height: 56px
+			background-color: rgb(67, 92, 54)
+			border-radius: 0
+			margin-bottom: 10px
+			transition: .3s all ease-in-out
+			cursor: pointer
+			text-align: center
+			line-height: 56px
+			a
+				padding: 0
+			&:hover
+				background-color: #a43732

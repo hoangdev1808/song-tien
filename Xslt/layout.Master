@@ -11,7 +11,7 @@
 		<portal:Favicon ID="Favicon1" runat="server" />
 		<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="true" />
 		<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
-
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
 	</head>
 
 	<body id="Body" runat="server" class="canhcam">
@@ -163,6 +163,12 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="dekstop" id="block__tool">
+				<div class="tool-ganeral">
+					<em class="ri-home-gear-fill"></em>
+				</div>
+				<portal:modulewrapper id="mdl154" runat="server" configuremoduleid="154" />
 			</div>
 		</form>
 		<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
